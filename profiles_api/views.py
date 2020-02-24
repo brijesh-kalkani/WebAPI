@@ -47,6 +47,7 @@ class HelloApiView(APIView):
         """Delete an object"""
         return Response({'method':'DELETE'})
 
+<<<<<<< HEAD
 
 class HelloViewSet(viewsets.ViewSet):
     """Test API ViewSet"""
@@ -97,3 +98,17 @@ class HelloViewSet(viewsets.ViewSet):
         """Handle removing an object"""
 
         return Response({'http_method': 'DELETE'})
+=======
+ class HelloViewSet(viewsets.ViewSet):
+        """Test API ViewSet"""
+
+        def list(self, request):
+            """Return a hello message"""
+            a_viewset = [
+                'Uses actions (list, create, retrieve, upadte, partial_update)',
+                'Automatically maps to URLs using Routers'
+                'Provides more functionality eith less code'
+            ]
+
+            return Response({'message':'Hello!','a_viewset':a_viewset})
+>>>>>>> 854a4da8207a9c4251706d5937da8ff65483e637
