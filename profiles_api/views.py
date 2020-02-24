@@ -47,8 +47,7 @@ class HelloApiView(APIView):
         """Delete an object"""
         return Response({'method':'DELETE'})
 
-
-    class HelloViewSet(viewsets.ViewSet):
+ class HelloViewSet(viewsets.ViewSet):
         """Test API ViewSet"""
 
         def list(self, request):
